@@ -138,6 +138,8 @@ pub fn create_directory_from_env(envname: &str) -> Option<String> {
 // provided by using the global reloadable handle
 // The logger will save only logs of the given level or above.
 pub fn init(minimal_level: Option<Level>, file_name: Option<&str>) -> Level {
+
+    /*
     let level = minimal_level.unwrap_or(Level::Warn);
     let level_filter = level.to_filter();
     let reloads = INITIATE_ONCE.init_once.get_or_init(|| {
@@ -225,6 +227,8 @@ pub fn init(minimal_level: Option<Level>, file_name: Option<&str>) -> Level {
         }
     };
     level
+    */
+    Level::Warn
 }
 
 macro_rules! create_log {
